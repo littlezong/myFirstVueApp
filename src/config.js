@@ -28,8 +28,8 @@ const CONFIG = {
     leanCloud: {
         // https://leancloud.cn/dashboard/applist.html#/apps
         // 配置appId和appKey后才可统计文章阅读次数和点赞数
-        appId: '',
-        appKey: ''
+        appId: 'your appId',
+        appKey: 'your appKey'
     }
 };
 
