@@ -2,16 +2,12 @@
 
 ### 项目用到的技术
 > 0.基于`vue-cli`脚手架
-
 > 1.安装了`element-ui`，按需加载。
 吐槽下这框架真不好用，用个按钮组件没问题但控制台老是报`elFormItem`错误。
 可能这套ui不适于博客类型网站；
-
 > 2.利用了`lean-cloud`来存储数据(其实也就访问量和点赞数)，leancloud文档[地址](https://leancloud.cn/docs/leanstorage_guide-js.html)；
-
 > 3.通过`marked.js`和`highlight.js`实现了**加载markdown文件**和**高亮代码块**；
-
-> 4.通过`axios`来请求加载数据
+> 4.通过`axios`来异步请求加载数据
 
 ### Setup
 
