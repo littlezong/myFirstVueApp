@@ -1,0 +1,122 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body{
+  text-rendering: optimizeLegibility;
+	background: $bgColor;
+}
+ul, li{
+	list-style: none;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+
+.pull-left{float: left;}
+.pull-right{float: right;}
+.clearfix{
+	zoom:1;
+	&:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+}
+
+.ellipsis-1{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.ellipsis-2{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 动画 */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  &.infinite {
+    animation-iteration-count: infinite;
+  }
+  &.twice{
+    animation-iteration-count: 2;
+  }
+  &.third{
+    animation-iteration-count: 3;
+  }
+}
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.zoom-out-enter-active {
+  transition: all .2s ease;
+}
+.zoom-out-leave-active {
+  transition: all .2s ease;
+}
+.zoom-out-enter, .zoom-out-leave-to{
+  transform: scale3d(.5, .5, .5);
+  opacity: 0;
+}
+.zoom-in-enter-active {
+  transition: all .3s ease;
+}
+.zoom-in-leave-active {
+  transition: all .3s ease;
+}
+.zoom-in-enter, .zoom-in-leave-to{
+  // transform: scale3d(.3, .3, .3);
+  opacity: 0;
+}
+
+/* animate */
+.fadeIn {
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.zoomInDown {
+  animation-name: zoomInDown;
+}
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
