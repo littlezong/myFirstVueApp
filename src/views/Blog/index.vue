@@ -6,6 +6,7 @@
                 <li v-for="nav in navList" :key="nav.icon">
                     <router-link :to="nav.path">
                         <i :class="`fa fa-${nav.icon}`"></i>
+                        {{nav.name}}
                     </router-link>
                 </li>
             </ul>
@@ -77,19 +78,12 @@
 
                 navList: [
                     {
+                        name: 'Markdown在线编辑器',
                         icon: 'pencil-square-o',
                         path: '/markdown'
                     }
                 ],
-                menuList: [{
-                    name: '首页',
-                    path: '/',
-                    icon: 'home'
-                }, {
-                    name: '关于',
-                    path: '/about',
-                    icon: 'paw'
-                }]
+                menuList: CONFIG.menuList
             }
         }
     }

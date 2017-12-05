@@ -55,15 +55,15 @@
             Btn
         },
         mounted(){
-            let params = this.$route.params;
-            this.getMdFiles(params);
+            this.getMdFiles();
         },
         methods: {
             formatTimeStr: Formatter.formatTimeStr,
             goBack(){
                 this.$router.go(-1);
             },
-            getMdFiles(params){
+            getMdFiles(){
+                let params = this.$route.params;
                 let url = 'static/posts/' + params.target + '.md';
                 this.$axios.get(url).then(response => {
                     this.loading = false;

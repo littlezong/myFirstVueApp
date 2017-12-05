@@ -4,7 +4,16 @@ const CONFIG = {
     description: '子非咸鱼，安知鱼之咸',
     // avatar: '', 默认avatar.jpg 更改头像只需命名avatar.jpg替换图片即可
     copyRight: 'Gnoz',
-    communities: [{
+    menuList: [{ // 左栏菜单
+        name: '首页',
+        path: '/',
+        icon: 'home'
+    }, {
+        name: '关于',
+        path: '/about',
+        icon: 'paw'
+    }],
+    communities: [{ // 卡片上四个图标
         name: 'github',
         icon: 'github',
         url: 'https://github.com/littlezong',
@@ -27,7 +36,7 @@ const CONFIG = {
     }],
     leanCloud: {
         // https://leancloud.cn/dashboard/applist.html#/apps
-        // 配置appId和appKey后才可统计文章阅读次数和点赞数
+        // 配置appId和appKey后才可统计文章阅读次数和点赞数，需要将地址添加进白名单
         appId: 'your appId',
         appKey: 'your appKey'
     }

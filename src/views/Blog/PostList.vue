@@ -73,6 +73,12 @@
                     path: 'post',
                     name: 'Post',
                     params: {...post}
+//                    query: {
+//                        title: post.title,
+//                        target: post.target,
+//                        date: post.date,
+//                        tags: post.tags
+//                    }
                 });
             }
         }
