@@ -7,6 +7,7 @@ import PostList from '@/views/Blog/PostList';
 import Post from '@/views/Blog/Post';
 import MarkdownEditor from '@/views/MarkdownEditor';
 import About from '@/views/About';
+import Share from '@/views/Share';
 
 Vue.use(Router);
 
@@ -25,13 +26,17 @@ export default new Router({
                 name: 'Post',
                 component: Post
             },{
+                path: '/share',
+                name: 'Share',
+                component: Share
+            },{
                 path: '/about',
                 name: 'About',
                 component: About
             }]
         },
         {
-            path: '/markdown',
+            path: '/markdown-editor',
             name: 'MarkdownEditor',
             component: MarkdownEditor
         }

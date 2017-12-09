@@ -3,11 +3,15 @@
         <el-header>
             <span class="animated slideInRight">{{name}}</span>
             <ul style="display: inline-block;float: right;">
-                <li v-for="nav in navList" :key="nav.icon">
-                    <router-link :to="nav.path">
+                <li v-for="nav in navList" :key="nav.icon" style="display: inline-block;margin-left: 20px;">
+                    <router-link v-if="nav.path" :to="nav.path">
                         <i :class="`fa fa-${nav.icon}`"></i>
                         {{nav.name}}
                     </router-link>
+                    <a v-else href="javascript: void(0);" @click="nav.ctrl">
+                        <i :class="`fa fa-${nav.icon}`"></i>
+                        {{nav.name}}
+                    </a>
                 </li>
             </ul>
         </el-header>
@@ -67,6 +71,7 @@
 
 <script>
     import CONFIG from '@/config';
+    import { Message } from 'element-ui';
     export default {
         data(){
             return {
@@ -78,12 +83,24 @@
 
                 navList: [
                     {
-                        name: 'Markdown在线编辑器',
+                        name: 'MARKDOWN在线编辑器',
                         icon: 'pencil-square-o',
-                        path: '/markdown'
+                        path: '/markdown-editor'
+                    },
+                    {
+                        name: '设置',
+                        icon: 'gears',
+                        ctrl: this.handleSetting
                     }
                 ],
                 menuList: CONFIG.menuList
+            }
+        },
+        methods: {
+            handleSetting(){
+                Message.info({
+                    message: 'Nothing happens'
+                });
             }
         }
     }

@@ -4,10 +4,14 @@ const CONFIG = {
     description: '子非咸鱼，安知鱼之咸',
     // avatar: '', 默认avatar.jpg 更改头像只需命名avatar.jpg替换图片即可
     copyRight: 'Gnoz',
-    menuList: [{ // 左栏菜单
+    menuList: [{ // 左栏菜单，配合router使用
         name: '首页',
         path: '/',
         icon: 'home'
+    }, {
+      name: '分享',
+      path: '/share',
+      icon: 'share-alt'
     }, {
         name: '关于',
         path: '/about',

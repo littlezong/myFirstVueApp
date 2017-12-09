@@ -5,7 +5,7 @@ import CONFIG from '@/config';
 import axios from 'axios';
 import hljs from 'highlight.js';
 import AV from 'leancloud-storage';
-import { Alert, Aside, Button, Card, Col, Container, Footer, Header, Loading, Main, Popover, Row, Tag } from 'element-ui';
+import { Alert, Aside, Button, Card, Col, Container, Footer, Header, Loading, Main, Popover, Row, Tag, Tooltip } from 'element-ui';
 Vue.use(Alert);
 Vue.use(Aside);
 Vue.use(Button);
@@ -19,6 +19,8 @@ Vue.use(Main);
 Vue.use(Popover);
 Vue.use(Row);
 Vue.use(Tag);
+Vue.use(Tooltip);
+
 
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
